@@ -2,15 +2,19 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: test
+  labels:
+    tier: frontend
 spec:
   replicas: 3
   selector:
     matchLabels:
       tier: frontend
+      author: bobby
   template:
     metadata:
       labels:
         tier: frontend
+        author: bobby
     spec:
       containers:
       - name: lb

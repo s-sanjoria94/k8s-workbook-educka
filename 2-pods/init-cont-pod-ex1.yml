@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: init-cont-demo
+  labels:
+    app: init-cont-demo
 spec:
   containers:
   - name: nginx
